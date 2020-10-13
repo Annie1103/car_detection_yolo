@@ -2,7 +2,7 @@
 
 利用YOLOv4協助辨識圖檔
 =
-建立環境
+<建立環境>
 -
 1.環境：[GoogleColab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true) (在執行YOLOv4之前，首先先檢查Colab的GPU環境）<br>
 -
@@ -20,27 +20,38 @@
     ! sed -i "s/CUDNN=0/CUDNN=1/g" /content/darknet/Makefile
     ! sed -i "s/OPENCV=0/OPENCV=1/g" /content/darknet/Makefile
     
-3.下載訓練好的權重<br>
--
-#### 這裡使用yolov4訓練好的資料 [yolo4.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights) <br>
-
-4.將yolo4.weight上傳到Colab環境
--
-從Github上clone darknet <br>
+3.從Github上clone darknet 
 -
     ! git clone https://github.com/AlexeyAB/darknet.git
     
-將YOLOv4編譯成可執行檔<br>
+4.下載訓練好的權重
+-
+#### 這裡使用yolov4訓練好的資料 [yolo4.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights) <br>
+
+5.將yolo4.weight上傳到Colab環境
+-
+    
+6.將YOLOv4編譯成可執行檔
 -
     ! cd darknet; make
 
-
-
-用Python-PIL打開要辨識的圖檔 <br>
+<開始準備辨識>
+-
+1.建立一個資料夾並上傳要辨識的圖檔
+-
+2.用Python-PIL打開要辨識的圖片 
 -
     from PIL import Image
 
     Image.open("/圖片路徑/")
 
-上傳
+
+2.開始辨識(注意YOLOv4的路徑）
 -
+    ! cd /content/darknet; ./darknet detect /content/darknet/cfg/yolov4.cfg /content/yolov4.weights /content/cartraining/car001.JPG
+    
+3.查看辨識後的圖片
+-
+    from PIL import Image
+
+    Image.open("/content/darknet/predictions.jpg")
