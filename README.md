@@ -55,3 +55,7 @@
     from PIL import Image
 
     Image.open("/content/darknet/predictions.jpg")
+
+![image](https://github.com/Annie1103/car_detection_yolo/blob/main/car001.png)
+
+![image](https://github.com/Annie1103/car_detection_yolo/blob/main/car002.png)
