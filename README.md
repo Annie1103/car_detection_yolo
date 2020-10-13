@@ -45,6 +45,9 @@
 
     Image.open("/圖片路徑/")
 
+![image](https://github.com/Annie1103/car_detection_yolo/blob/main/IMG_3425.JPG)
+
+![image](https://github.com/Annie1103/car_detection_yolo/blob/main/IMG_3432.JPG)
 
 2.開始辨識(注意YOLOv4的路徑）
 -
