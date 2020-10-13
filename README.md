@@ -28,9 +28,10 @@
 -
 #### 這裡使用yolov4訓練好的資料 [yolo4.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights) <br>
 
-5.將yolo4.weight上傳到Colab環境
+5.將yolo4.weight檔案上傳到Colab環境
 -
-    
+#### （注意路徑） 
+
 6.將YOLOv4編譯成可執行檔
 -
     ! cd darknet; make
