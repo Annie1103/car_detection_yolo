@@ -50,11 +50,11 @@
 
 ![image](https://github.com/Annie1103/car_detection_yolo/blob/main/IMG_3432.JPG)
 
-2.開始辨識(注意YOLOv4的路徑）
+2.開始辨識(注意yolov4.weights的路徑）
 -
     ! cd /content/darknet; ./darknet detect /content/darknet/cfg/yolov4.cfg /content/yolov4.weights /content/cartraining/car001.JPG
     
-3.查看辨識後的圖片
+3.查看辨識後的圖片(辨識後會生成一個predictions.jpg)
 -
     from PIL import Image
 
